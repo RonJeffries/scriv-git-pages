@@ -216,6 +216,8 @@ Normally when MMD is compiled, I guess, they clear the folder and then fill it. 
 
 However, what this suggests to me is that I can get a shorter URL for these early draft copies using the _mmd trick. I’ll try that right now, hoping to create this version right here. And before I do that, I’ll put a version marker at the very top of the book. Then I’ll compile it and push a copy. 
 
+That works and it’s preserved at [https://ronjeffries.github.io/scriv-git-pages/v20180616_mmd/](https://ronjeffries.github.io/scriv-git-pages/v20180616_mmd/)
+
 [ScreenShot2018-06-15at3.48.45AM]: ScreenShot2018-06-15at3.48.45AM.png
 
 [ScreenShot2018-06-15at3.56.55AM]: ScreenShot2018-06-15at3.56.55AM.png
