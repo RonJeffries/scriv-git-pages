@@ -1,6 +1,6 @@
 # Initial Notes #
 
-Version 6/16/18
+Version 20180616
 
 We’re here to create a little “book”, showing how to create the GitHub pages you will be reading when this is all done. This chapter starts at the beginning, though it may not wind up being the first page of the “book”.
 
