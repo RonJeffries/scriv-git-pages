@@ -6,18 +6,18 @@ Version 20180617
 
 Created by Hand, in Sublime Text
 
-[Introduction](index.html)
-[Style, Scrivener's and Mine](01.html)
-[ToC and Pages](02.html)
-[Starting the Project](03.html)
-[Default Formatting](04.html)
-[Styles](05.html)
-[Sections](06.html)
-[Documents, Sections, Layouts](07.html)
-[Regrets, I've had a few](08.html)
-[Testing the Compile](09.html)
-[Setting up the project](10.html)
-[Appendices](11.html)
+* [Introduction](index.html)
+* [Style, Scrivener's and Mine](01.html)
+* [ToC and Pages](02.html)
+* [Starting the Project](03.html)
+* [Default Formatting](04.html)
+* [Styles](05.html)
+* [Sections](06.html)
+* [Documents, Sections, Layouts](07.html)
+* [Regrets, I've had a few](08.html)
+* [Testing the Compile](09.html)
+* [Setting up the project](10.html)
+* [Appendices](11.html)
 
 ### Welcome
 
