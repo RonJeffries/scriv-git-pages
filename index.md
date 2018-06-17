@@ -1,7 +1,5 @@
 # Introduction #
 
-Version 20180617
-
 ### Table of Contents
 
 Created by Hand, in Sublime Text
@@ -19,7 +17,7 @@ Created by Hand, in Sublime Text
 * [Setting up the project](10.html)
 * [Appendices](11.html)
 
-### Welcome
+Version 20180617
 
 Welcome to scriv-git-pages! This is a little book about how to use Scrivener to produce a little book on GitHub Pages.
 
