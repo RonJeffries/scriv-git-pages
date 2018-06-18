@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 20180617 12:10 PM
+Version 6/18/18 5:42 AM
 
 ### Table of Contents
 
@@ -19,7 +19,10 @@ Created by Hand, in Sublime Text
 * [Setting up the project](10.html)
 * [Splitting](11.html)
 * [Prev, Top, Next](12.html)
-* [Appendices](13.html)
+* [Image References Fail](13.html)
+* [Image References Alternative](14.md)
+* [Refactoring First](15.md)
+* [Appendices](16.html)
 
 ### Welcome
 
@@ -38,3 +41,51 @@ Here goes!
 
 
 [Top](index.html) [Next](01.html)
+
+
+
+
+[ScreenShot2018-06-17at5.43.41AM]: ScreenShot2018-06-17at5.43.41AM.png
+
+[ScreenShot2018-06-15at3.48.45AM]: ScreenShot2018-06-15at3.48.45AM.png
+
+[ScreenShot2018-06-15at3.56.55AM]: ScreenShot2018-06-15at3.56.55AM.png
+
+[ScreenShot2018-06-15at3.59.33AM]: ScreenShot2018-06-15at3.59.33AM.png
+
+[ScreenShot2018-06-15at4.15.13AM]: ScreenShot2018-06-15at4.15.13AM.png
+
+[ScreenShot2018-06-15at4.31.51AM]: ScreenShot2018-06-15at4.31.51AM.png
+
+[ScreenShot2018-06-15at4.33.00AM]: ScreenShot2018-06-15at4.33.00AM.png
+
+[ScreenShot2018-06-15at4.34.19AM]: ScreenShot2018-06-15at4.34.19AM.png
+
+[ScreenShot2018-06-15at4.35.50AM]: ScreenShot2018-06-15at4.35.50AM.png
+
+[ScreenShot2018-06-15at4.53.51AM]: ScreenShot2018-06-15at4.53.51AM.png
+
+[ScreenShot2018-06-15at4.55.43AM]: ScreenShot2018-06-15at4.55.43AM.png
+
+[ScreenShot2018-06-15at5.07.22AM]: ScreenShot2018-06-15at5.07.22AM.png
+
+[ScreenShot2018-06-15at5.12.50AM]: ScreenShot2018-06-15at5.12.50AM.png
+
+[ScreenShot2018-06-15at5.14.54AM]: ScreenShot2018-06-15at5.14.54AM.png
+
+[ScreenShot2018-06-15at9.24.21AM]: ScreenShot2018-06-15at9.24.21AM.png
+
+[ScreenShot2018-06-15at9.59.53AM]: ScreenShot2018-06-15at9.59.53AM.png
+
+[ScreenShot2018-06-16at7.47.10AM]: ScreenShot2018-06-16at7.47.10AM.png
+
+[ScreenShot2018-06-17at6.41.19AM]: ScreenShot2018-06-17at6.41.19AM.png
+
+[ScreenShot2018-06-17at7.05.30AM]: ScreenShot2018-06-17at7.05.30AM.png
+
+[ScreenShot2018-06-17at8.13.28PM]: ScreenShot2018-06-17at8.13.28PM.png
+
+[ScreenShot2018-06-18at9.45.26AM]: ScreenShot2018-06-18at9.45.26AM.png
+
+[ScreenShot2018-06-17at6.06.28AM]: ScreenShot2018-06-17at6.06.28AM.png
+
