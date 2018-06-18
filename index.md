@@ -41,7 +41,7 @@ Here goes!
 
 
 
-[Top](index.html) [Style, Scrivener's and Mine](01.html)
+[Top](index.html) | [Style, Scrivener's and Mine](01.html)
 
 
 
