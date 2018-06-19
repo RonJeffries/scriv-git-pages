@@ -1,30 +1,29 @@
 # Introduction #
 
-Version 2018-06-19 5:02 AM
+Version 6/19/18 10:18 AM
 
 ### Table of Contents
 
-Created by Hand, in Sublime Text
-
-* [Introduction](index.html)
-* [Style, Scrivener's and Mine](01.html)
-* [ToC and Pages](02.html)
-* [Starting the Project](03.html)
-* [Default Formatting](04.html)
-* [Styles](05.html)
-* [Sections](06.html)
-* [Documents, Sections, Layouts](07.html)
-* [Regrets, I've had a few](08.html)
-* [Testing the Compile](09.html)
-* [Setting up the project](10.html)
-* [Splitting](11.html)
-* [Prev, Top, Next](12.html)
-* [Image References Fail](13.html)
+* [Introduction](index.md)
+* [Style, Scrivener's and Mine](01.md)
+* [ToC and Pages](02.md)
+* [Starting the Project](03.md)
+* [Default Formatting](04.md)
+* [Styles](05.md)
+* [Sections](06.md)
+* [Documents, Sections, Layouts](07.md)
+* [Regrets, I've had a few](08.md)
+* [Testing the Compile](09.md)
+* [Setting up the project](10.md)
+* [Splitting](11.md)
+* [Prev, Top, Next](12.md)
+* [Image References Fail](13.md)
 * [Image References Alternative](14.md)
 * [Refactoring First](15.md)
 * [Image References](16.md)
-* [Better Links](17.html)
-* [Appendices](18.html)
+* [Better Links](17.md)
+* [Creating the ToC](18.md)
+* [Appendices](19.md)
 
 ### Welcome
 
