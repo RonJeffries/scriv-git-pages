@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 6/18/18 10:18 AM
+Version 2018-06-19 5:02 AM
 
 ### Table of Contents
 
@@ -23,7 +23,8 @@ Created by Hand, in Sublime Text
 * [Image References Alternative](14.md)
 * [Refactoring First](15.md)
 * [Image References](16.md)
-* [Appendices](17.html)
+* [Better Links](17.html)
+* [Appendices](18.html)
 
 ### Welcome
 
