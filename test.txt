@@ -1,0 +1,21 @@
+halves length 2
+index.md: Introduction
+01.md: Style, Scrivener's and Mine
+02.md: ToC and Pages
+03.md: Starting the Project
+04.md: Default Formatting
+05.md: Styles
+06.md: Sections
+07.md: Documents, Sections, Layouts
+08.md: Regrets, I've had a few
+09.md: Testing the Compile
+10.md: Setting up the project
+11.md: Splitting
+12.md: Prev, Top, Next
+13.md: Image References Fail
+14.md: Image References Alternative
+15.md: Refactoring First
+16.md: Image References
+17.md: Better Links
+18.md: Creating the ToC
+19.md: Appendices

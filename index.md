@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 6/19/18 10:18 AM
+Version 2018-06-19 10:18 AM
 
 ### Table of Contents
 
