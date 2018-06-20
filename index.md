@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-19 8:46 PM
+Version 6/20/18 10:38 AM
 
 ### Table of Contents
 
@@ -24,7 +24,8 @@ Version 2018-06-19 8:46 PM
 * [Better Links](17.md)
 * [Creating the ToC](18.md)
 * [Post-Processing Built In](19.md)
-* [Appendices](20.md)
+* [Assessing Where We Are](20.md)
+* [Appendices](21.md)
 
 ### Welcome
 
