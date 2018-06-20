@@ -18,4 +18,5 @@ index.md: Introduction
 16.md: Image References
 17.md: Better Links
 18.md: Creating the ToC
-19.md: Appendices
+19.md: Post-Processing Built In
+20.md: Appendices
