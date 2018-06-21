@@ -7,8 +7,8 @@ index.md: Introduction
 05.md: Sections
 06.md: Documents, Sections, Layouts
 07.md: Regrets, I've had a few
-08.md: Testing the Compile #
-09.md: Setting up the project #
+08.md: Testing the Compile
+09.md: Setting up the project
 10.md: ToC and Pages
 11.md: Splitting
 12.md: Prev, Top, Next
@@ -20,4 +20,4 @@ index.md: Introduction
 18.md: Creating the ToC
 19.md: Post-Processing Built In
 20.md: Assessing Where We Are
-21.md: Appendices #
+21.md: Appendices and Ephemera

@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-20 10:20 PM
+Version 2018-06-21 5:23 AM
 
 ### Table of Contents
 
@@ -12,8 +12,8 @@ Version 2018-06-20 10:20 PM
 * [Sections](05.md)
 * [Documents, Sections, Layouts](06.md)
 * [Regrets, I've had a few](07.md)
-* [Testing the Compile #](08.md)
-* [Setting up the project #](09.md)
+* [Testing the Compile](08.md)
+* [Setting up the project](09.md)
 * [ToC and Pages](10.md)
 * [Splitting](11.md)
 * [Prev, Top, Next](12.md)
@@ -25,7 +25,7 @@ Version 2018-06-20 10:20 PM
 * [Creating the ToC](18.md)
 * [Post-Processing Built In](19.md)
 * [Assessing Where We Are](20.md)
-* [Appendices #](21.md)
+* [Appendices and Ephemera](21.md)
 
 ### Welcome
 
