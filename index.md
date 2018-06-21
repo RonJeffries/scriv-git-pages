@@ -1,20 +1,20 @@
 # Introduction #
 
-Version 2018-06-20 6:03 PM
+Version 2018-06-20 10:20 PM
 
 ### Table of Contents
 
 * [Introduction](index.md)
 * [Style, Scrivener's and Mine](01.md)
-* [ToC and Pages](02.md)
-* [Starting the Project](03.md)
-* [Default Formatting](04.md)
-* [Styles](05.md)
-* [Sections](06.md)
-* [Documents, Sections, Layouts](07.md)
-* [Regrets, I've had a few](08.md)
-* [Testing the Compile #](09.md)
-* [Setting up the project #](10.md)
+* [Starting the Project](02.md)
+* [Default Formatting](03.md)
+* [Styles](04.md)
+* [Sections](05.md)
+* [Documents, Sections, Layouts](06.md)
+* [Regrets, I've had a few](07.md)
+* [Testing the Compile #](08.md)
+* [Setting up the project #](09.md)
+* [ToC and Pages](10.md)
 * [Splitting](11.md)
 * [Prev, Top, Next](12.md)
 * [Image References Fail](13.md)
