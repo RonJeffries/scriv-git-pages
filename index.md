@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-21 5:23 AM
+Version 6/22/18 9:40 AM
 
 ### Table of Contents
 
@@ -26,6 +26,7 @@ Version 2018-06-21 5:23 AM
 * [Post-Processing Built In](19.md)
 * [Assessing Where We Are](20.md)
 * [Appendices and Ephemera](21.md)
+* [TL; DR](22.md)
 
 ### Welcome
 
