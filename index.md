@@ -1,10 +1,14 @@
 # Introduction #
 
-Version 2018-06-23 6:06 AM
+Version 2018-06-23 9:26 AM
 
 ### Table of Contents
 
-Recent Changes: TL; DR summarizes settings changes!
+Recent Changes: 
+
+* Thoughts on Improvements - maybe in the future
+* Forum Links - forum topics relating to this booklet
+* TL; DR - summarizes settings changes!
 
 * [Introduction](index.md)
 * [Style, Scrivener's and Mine](01.md)
