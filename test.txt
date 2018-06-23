@@ -20,5 +20,6 @@ index.md: Introduction
 18.md: Creating the ToC
 19.md: Post-Processing Built In
 20.md: Assessing Where We Are
-21.md: Appendices and Ephemera
-22.md: TL; DR
+21.md: TL; DR
+22.md: Thoughts on Improvements
+23.md: Appendices and Ephemera

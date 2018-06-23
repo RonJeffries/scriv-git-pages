@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-22 1:14 PM
+Version 2018-06-23 6:06 AM
 
 ### Table of Contents
 
@@ -27,8 +27,9 @@ Recent Changes: TL; DR summarizes settings changes!
 * [Creating the ToC](18.md)
 * [Post-Processing Built In](19.md)
 * [Assessing Where We Are](20.md)
-* [Appendices and Ephemera](21.md)
-* [TL; DR](22.md)
+* [TL; DR](21.md)
+* [Thoughts on Improvements](22.md)
+* [Appendices and Ephemera](23.md)
 
 ### Welcome
 
@@ -95,8 +96,6 @@ Here goes!
 
 [ScreenShot2018-06-19at80328PM]: ScreenShot2018-06-19at80328PM.png
 
-[ScreenShot2018-06-17at60628AM]: ScreenShot2018-06-17at60628AM.png
-
 [ScreenShot2018-06-22at101952AM]: ScreenShot2018-06-22at101952AM.png
 
 [ScreenShot2018-06-22at102316AM]: ScreenShot2018-06-22at102316AM.png
@@ -110,4 +109,8 @@ Here goes!
 [ScreenShot2018-06-22at104957AM]: ScreenShot2018-06-22at104957AM.png
 
 [ScreenShot2018-06-22at110544AM]: ScreenShot2018-06-22at110544AM.png
+
+[ScreenShot2018-06-23at52634AM]: ScreenShot2018-06-23at52634AM.png
+
+[ScreenShot2018-06-17at60628AM]: ScreenShot2018-06-17at60628AM.png
 
