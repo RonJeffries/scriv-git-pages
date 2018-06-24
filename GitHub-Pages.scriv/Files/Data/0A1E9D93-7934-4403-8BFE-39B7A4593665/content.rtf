@@ -1,0 +1,173 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 OK, our issue is that Scrivener puts references, including images, at the end of the whole document. When we split the document into multiple files, one per section, each section needs to have those references at its end, or its images won\'92t link up.\
+\
+So our mission, and we do wish to accept it, is to strip out the references from the end, and copy them onto the end of every output file before we close it. My cunning plan is roughly this:\
+\
+1. Put a separator at the end of the document, so that the last chunk we split out is the references section.\
+2. Remove that section from the array of chunks, so that we don\'92t put it out as a separate file,\
+3. But *do* append it to each of the other files.\
+\
+If you look at AmberV\'92s script, this is accomplished by saving the section\'92s titles and file handles in a Hash, and then looping over them, appending the reference section to each. My script doesn\'92t have the section titles, but I think I can accomplish much the same thing by saving the file handles in an array.\
+\
+The big moral decision here is whether to clean up this script first. Here it is:\
+\
+```ruby\
+#!/usr/bin/env ruby -wU\
+require 'tempfile'\
+\
+SPLIT_MARKER = "----\\n\\n"\
+\
+filenumber = 0\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+# puts "Chunks length %d" % chunks.length\
+chunks.each do |chunk|\
+\
+  next if chunk.length < 1\
+  title = chunk.split("\\n")[0]\
+  if filenumber == 0\
+    filename = "index.md"\
+  else\
+    filename = sprintf("%02d", filenumber) + ".md"\
+  end\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  link = ""\
+  if ( filenumber == 1 ) \
+    link += "[Prev](index.html) "\
+  elsif filenumber > 1\
+    link += "[Prev](%02d.html) " % (filenumber - 1) unless filenumber == 0\
+  end\
+  link += "[Top](index.html) "\
+  link += "[Next](%02d.html)" % (filenumber + 1) unless filenumber >= chunks.length - 1\
+  tf.puts\
+  tf.puts\
+  tf.puts link\
+  tf.close\
+  filenumber += 1\
+end\
+```\
+\
+That\'92s pretty awful. I think I need to do at least a little cleanup before making it worse. Without a pair, though, and without tests, I hesitate to go too far. I\'92ll try a bit of cleanup,  however. I should probably really create a class and call it but I\'92m going to hold off on that, simply because I\'92m rusty and more confident pulling out some functions. First, let\'92s go after creating that link line, which should be pretty simple. (Hold my beer.)\
+\
+Ha! How could you doubt me? How could I doubt me? This worked, the first time:\
+\
+```ruby\
+#!/usr/bin/env ruby -wU\
+require 'tempfile'\
+\
+SPLIT_MARKER = "----\\n\\n"\
+\
+def make_link_line(filenumber, max_length)\
+  link = ""\
+  if ( filenumber == 1 ) \
+    link += "[Prev](index.html) "\
+  elsif filenumber > 1\
+    link += "[Prev](%02d.html) " % (filenumber - 1) unless filenumber == 0\
+  end\
+  link += "[Top](index.html) "\
+  link += "[Next](%02d.html)" % (filenumber + 1) unless filenumber >= max_length\
+  return link\
+end\
+\
+filenumber = 0\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+# puts "Chunks length %d" % chunks.length\
+chunks.each do |chunk|\
+\
+  next if chunk.length < 1\
+  title = chunk.split("\\n")[0]\
+  if filenumber == 0\
+    filename = "index.md"\
+  else\
+    filename = sprintf("%02d", filenumber) + ".md"\
+  end\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  tf.puts\
+  tf.puts\
+  tf.puts make_link_line(filenumber, chunks.length - 1)\
+  tf.close\
+  filenumber += 1\
+end\
+```\
+\
+I\'92ll factor out the filename creation the same way. Because I\'92m not as dumb as I look, I do that in two steps. First I create and use a `make_file_name` function by extracting the code as-is:\
+\
+```ruby\
+def make_file_name(filenumber)\
+  if filenumber == 0\
+    filename = "index.md"\
+  else\
+    filename = sprintf("%02d", filenumber) + ".md"\
+  end\
+end\
+```\
+\
+Now let\'92s improve that function:\
+\
+```ruby\
+def make_file_name(filenumber)\
+  return "index.md" if filenumber == 0\
+  return sprintf("%02d.md", filenumber)\
+end\
+```\
+OK, that\'92s nice. Here\'92s the main code now:\
+\
+```ruby\
+filenumber = 0\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+# puts "Chunks length %d" % chunks.length\
+chunks.each do |chunk|\
+\
+  next if chunk.length < 1\
+  title = chunk.split("\\n")[0]\
+  filename = make_file_name(filenumber)\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  tf.puts\
+  tf.puts\
+  tf.puts make_link_line(filenumber, chunks.length - 1)\
+  tf.close\
+  filenumber += 1\
+end\
+```\
+\
+Looking at this, we see half a dozen lines writing out the file. That should be factored out as well. And I am wondering: if we break the reference chunk off at the very beginning and cache it away in a variable, couldn\'92t we just append it during the main write, rather than in a second pass? It sure seems like we could. So I\'92ll factor out the writing and see what we get. A bit of polishing and we have this:\
+\
+```ruby\
+\
+def write_file(chunk, filenumber, max_length)\
+  filename = make_file_name(filenumber)\
+  title = chunk.split("\\n")[0]\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  tf.puts\
+  tf.puts\
+  tf.puts make_link_line(filenumber, max_length)\
+  tf.close\
+end\
+\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+filenumber = 0\
+chunks.each do |chunk|\
+  write_file(chunk, filenumber, chunks.length - 1) unless chunk.length < 1\
+  filenumber += 1\
+end\
+```\
+\
+Now that, I don\'92t mind saying, is a noticeable improvement. We\'92ll add the references in the next section.\
+\
+}

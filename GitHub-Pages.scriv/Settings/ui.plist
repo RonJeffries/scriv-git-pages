@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CollectionSelections</key>
+	<dict>
+		<key>132E9717-28A5-417F-866D-428E051AE1F1</key>
+		<array>
+			<string>23216A60-1DB4-44BC-B71F-0E54506C4510</string>
+		</array>
+	</dict>
+	<key>CompileFolder</key>
+	<string>/Users/ron/Dropbox/ScrivGitPages_mmd</string>
+	<key>NotesScaleFactor</key>
+	<real>1.5</real>
+	<key>SuppressBookmarksFolderCheck</key>
+	<false/>
+	<key>binderSplitFrames</key>
+	<array>
+		<string>{{0, 0}, {265, 650}}</string>
+		<string>{{266, 0}, {980, 650}}</string>
+	</array>
+	<key>collectionSelectionAutosaveName</key>
+	<array>
+		<integer>5</integer>
+	</array>
+	<key>collectionsRepresentedBinderDocumentsInfo</key>
+	<dict>
+		<key>MainID</key>
+		<string></string>
+		<key>SupportingID</key>
+		<string></string>
+	</dict>
+	<key>fullScreenTextEditorSettings</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.25</real>
+	</dict>
+	<key>inspectorSplitFrames</key>
+	<array>
+		<string>{{0, 0}, {734, 620}}</string>
+		<string>{{735, 0}, {245, 620}}</string>
+	</array>
+	<key>inspectorWidth</key>
+	<real>245</real>
+	<key>mainDocumentEditor.dockedQRTextSettings</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.5</real>
+	</dict>
+	<key>mainDocumentEditor.scrollRect</key>
+	<string>{{0, 0}, {489.33333333333331, 376}}</string>
+	<key>mainDocumentEditor.shouldLoadMobileRecent</key>
+	<true/>
+	<key>mainDocumentEditor.textEditorState</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.5</real>
+	</dict>
+	<key>mainWindowFrame</key>
+	<string>791 525 1246 672 0 0 2560 1417 </string>
+	<key>searchResultsTable</key>
+	<dict>
+		<key>order</key>
+		<array>
+			<string>TITLE</string>
+		</array>
+		<key>widths</key>
+		<dict>
+			<key>TITLE</key>
+			<real>263</real>
+		</dict>
+	</dict>
+	<key>supportingDocumentEditor.dockedQRTextSettings</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.5</real>
+	</dict>
+	<key>supportingDocumentEditor.scrollRect</key>
+	<string>{{0, 0}, {620, 294}}</string>
+	<key>supportingDocumentEditor.textEditorState</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.5</real>
+	</dict>
+	<key>supportingDocumentViewIsCurrent</key>
+	<false/>
+</dict>
+</plist>

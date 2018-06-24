@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 I decided to improve the links between articles, just because I could. Let me make a few quick points though.\
+\
+First, improving the links is probably not the most valuable new feature for building this booklet. Contenders for most important include automating the creation of the table of contents, which I am making entirely by hand, and fully automating the splitting process. And those things might be more valuable to you, the reader as well.\
+\
+Second, with the making of links so nicely factored out into a separate method, improving their formatting became very simple. So, with a few minutes in the afternoon to do something, I chose to do that. I\'92ll do the harder things when I have more time and ability to concentrate.\
+\
+Third, doing the links prepares us for the somewhat trickier job of creating the table of contents, so it\'92s a step in an important direction.\
+\
+Anyway, here\'92s what I did:\
+\
+The fundamental idea is that I was already extracting the title of each section, which I was printing as I wrote the file, with this code in `write_file`:\
+\
+```ruby\
+\pard\sl288\slmult1\pardirnatural\partightenfactor0
+\cf0   title = chunk.split("\\n")[0]\
+  puts filename + ": " + title\
+```\
+\
+So it made some sense to save the titles in a little Hash, by file number, and then print them in the `make_link_line` function. That almost went as planned. Almost. My first attempt just saved the titles in the Hash as we processed, in `write_file`, which called `make_link_line`, which used the Hash. That nearly worked, except that `make_link_line` needs to know the title for the *next* article, which hasn\'92t been read in yet.\
+\
+No problem,  just do two passes through the chunks, one to build the titles, and one to write the files. First I\'92ll show you the bits, then save the whole script here for you.\
+\
+The main looks like this now:\
+\
+```ruby\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+reference_chunk = chunks.delete_at(-1)\
+filenumber = 0\
+chunks.each do | chunk |\
+  title = chunk.split("\\n")[0]\
+  Titles[filenumber] = title[2..-3]\
+  filenumber += 1\
+end\
+filenumber = 0\
+chunks.each do |chunk|\
+  write_file(chunk, reference_chunk, filenumber, chunks.length - 1) unless chunk.length < 1\
+  filenumber += 1\
+end\
+```\
+\
+You can see the two passes, one saving titles, and one writing out the files. Writing the file is still a bit odd, because it gets the title again and it need not. I just noticed that fact now:\
+\
+```ruby\
+def write_file(chunk, reference_chunk, filenumber, max_length)\
+  filename = make_file_name(filenumber)\
+  title = chunk.split("\\n")[0]\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  tf.puts\
+  tf.puts\
+  tf.puts make_link_line(filenumber, max_length)\
+  tf.puts\
+  tf.puts\
+  tf.print reference_chunk\
+  tf.puts\
+  tf.puts\
+  tf.close\
+end\
+```\
+\
+I can replace that `title =` line with a reference to the Hash, and I\'92ll do that right now: \
+\
+`  title = Titles[filenumber]`\
+\
+This works fine, with the surprising result that the trace now shows the titles without the hash marks around them that used to be printed. Why? Because we create the Titles Hash with this:\
+\
+`Titles[filenumber] = title[2..-3]`\
+\
+Which removes the \'93# \'93 and \'93 #\'94 from the beginning and end of the title line as compiled by Scrivener. Anyway, that\'92s super. The new `make_link` looks like this:\
+\
+```ruby\
+def make_link_line(filenumber, max_length)\
+  link = ""\
+  if filenumber > 0\
+    link += "[%s](%02d.html) | " % [Titles[filenumber - 1], filenumber - 1]\
+  end\
+  link += "[Top](index.html) | "\
+  link += "[%s](%02d.html)" % [Titles[filenumber + 1], filenumber + 1] unless filenumber >= max_length\
+  return link\
+end\
+```\
+\
+That\'92s cleaned up a bit from the previous version, which had gotten a bit crufty as I hammered it into submission. Here we see, as we always do, that even with the best of will, code tends to deteriorate, and it\'92s valuable to improve it when we see a chance. \
+\
+One other neat thing happened. You\'92ll notice I interpolated vertical bars between the links. They didn\'92t really stand out from each other without the bars, so I was envisioning a link line like\
+\
+\'93Setting up the project \\| Top \\| Splitting\'94\
+\
+But what I got was this:\
+\
+Setting up the project | Top | Splitting\
+\
+This happens because Scrivener correctly compiles the Markdown notation for tables, which is to put things between vertical bars. I had forgotten that entirely, but I certainly like the result.\
+\
+So, without further ado, here\'92s the current version of the Ruby script. After putting it here, I\'92ll update the table of contents and push the booklet to GitHub Pages. Later today (it\'92s 5 AM just now) I\'92ll work on whatever I decide to do next.\
+\
+```ruby\
+#!/usr/bin/env ruby -wU\
+require 'tempfile'\
+\
+SPLIT_MARKER = "----\\n\\n"\
+Titles = \{\}\
+\
+def make_file_name(filenumber)\
+  return "index.md" if filenumber == 0\
+  return sprintf("%02d.md", filenumber)\
+end\
+\
+def make_link_line(filenumber, max_length)\
+  link = ""\
+  if filenumber > 0\
+    link += "[%s](%02d.html) | " % [Titles[filenumber - 1], filenumber - 1]\
+  end\
+  link += "[Top](index.html) | "\
+  link += "[%s](%02d.html)" % [Titles[filenumber + 1], filenumber + 1] unless filenumber >= max_length\
+  return link\
+end\
+\
+def write_file(chunk, reference_chunk, filenumber, max_length)\
+  filename = make_file_name(filenumber)\
+  title = Titles[filenumber]\
+  puts filename + ": " + title\
+  tf = File.new(filename, "w")\
+  tf.print chunk\
+  tf.puts\
+  tf.puts\
+  tf.puts make_link_line(filenumber, max_length)\
+  tf.puts\
+  tf.puts\
+  tf.print reference_chunk\
+  tf.puts\
+  tf.puts\
+  tf.close\
+end\
+\
+input = ARGF.read\
+chunks = input.split(SPLIT_MARKER)\
+reference_chunk = chunks.delete_at(-1)\
+filenumber = 0\
+chunks.each do | chunk |\
+  title = chunk.split("\\n")[0]\
+  Titles[filenumber] = title[2..-3]\
+  filenumber += 1\
+end\
+filenumber = 0\
+chunks.each do |chunk|\
+  write_file(chunk, reference_chunk, filenumber, chunks.length - 1) unless chunk.length < 1\
+  filenumber += 1\
+end\
+```}
