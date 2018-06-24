@@ -1,9 +1,11 @@
 #!/usr/bin/ruby
 #!/Users/ron/.rvm/rubies/ruby-2.3.0/bin/ruby
 require 'tempfile'
+require 'fileutils'
 
 SPLIT_MARKER = "----\n\n"
 TOC_MARKER = "<!--TOC-->\n"
+SCRIPT_FILE = "/Users/ron/Dropbox/bin/splitter"
 Titles = {}
 
 def add_toc(chunk)
@@ -82,4 +84,4 @@ reference_chunk = chunks.delete_at(-1)
 record_titles(chunks)
 update_table_of_contents(chunks)
 write_files(chunks, reference_chunk)
-
+FileUtils.cp(SCRIPT_FILE, ".")
