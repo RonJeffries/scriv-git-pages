@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-24 7:39 AM
+Version 2018-06-24 9:33 PM
 
 Recent Changes: 
 
@@ -117,6 +117,12 @@ Here goes!
 [ScreenShot2018-06-22at110544AM]: ScreenShot2018-06-22at110544AM.png
 
 [ScreenShot2018-06-23at52634AM]: ScreenShot2018-06-23at52634AM.png
+
+[ScreenShot2018-06-24at92104PM]: ScreenShot2018-06-24at92104PM.png
+
+[ScreenShot2018-06-24at92825PM]: ScreenShot2018-06-24at92825PM.png
+
+[ScreenShot2018-06-24at92908PM]: ScreenShot2018-06-24at92908PM.png
 
 [ScreenShot2018-06-17at60628AM]: ScreenShot2018-06-17at60628AM.png
 
