@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 2018-06-24 9:43 PM
+Version 2018-06-25 7:00 AM
 
 Recent Changes: 
 
@@ -39,7 +39,7 @@ TL;DR - summarizes settings changes
 
 ### Welcome
 
-Welcome to scriv-git-pages! This is a little book about how to use Scrivener to produce a little book on GitHub Pages.
+Welcome to scriv-git-pages! This is a little book about how to use Scrivener 3 to produce a little book on GitHub Pages.
 
 I have had and admired the Scrivener app for a long time, and always wanted to write something using it. I’ve tried it a few times for NaNoWriMo, National Novel Writing Month, to some good effect but ultimately no novel. I’ve tried it for a few other efforts, and right now I’m using it to write another little book that you’ll never see.
 
