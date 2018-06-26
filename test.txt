@@ -22,4 +22,5 @@ index.md: Introduction
 20.md: Assessing Where We Are
 21.md: TL; DR
 22.md: Thoughts on Improvements
-23.md: Appendices and Ephemera
+23.md: The End
+24.md: Appendices and Ephemera

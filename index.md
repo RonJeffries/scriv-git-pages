@@ -1,6 +1,6 @@
 # Introduction #
 
-Version 6/26/18 10:39 AM
+Version 6/26/18 10:41 AM
 
 Recent Changes: 
 
@@ -35,7 +35,8 @@ TL;DR - summarizes settings changes
 * [Assessing Where We Are](20.md)
 * [TL; DR](21.md)
 * [Thoughts on Improvements](22.md)
-* [Appendices and Ephemera](23.md)
+* [The End](23.md)
+* [Appendices and Ephemera](24.md)
 
 ### Welcome
 
