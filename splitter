@@ -57,6 +57,8 @@ def write_file(chunk, reference_chunk, filenumber, max_length)
   title = Titles[filenumber]
   puts filename + ": " + title
   tf = File.new(filename, "w")
+  tf.puts make_link_line(filenumber, max_length)
+  tf.puts
   tf.print chunk
   tf.puts
   tf.puts
