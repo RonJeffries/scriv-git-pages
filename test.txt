@@ -1,26 +1,27 @@
 halves length 2
-index.md: Introduction
-01.md: Style, Scrivener's and Mine
-02.md: Starting the Project
-03.md: Default Formatting
-04.md: Styles
-05.md: Sections
-06.md: Documents, Sections, Layouts
-07.md: Regrets, I've had a few
-08.md: Testing the Compile
-09.md: Setting up the project
-10.md: ToC and Pages
-11.md: Splitting
-12.md: Prev, Top, Next
-13.md: Image References Fail
-14.md: Image References Alternative
-15.md: Refactoring First
-16.md: Image References
-17.md: Better Links
-18.md: Creating the ToC
-19.md: Post-Processing Built In
-20.md: Assessing Where We Are
-21.md: TL; DR
-22.md: Thoughts on Improvements
-23.md: The End
-24.md: Appendices and Ephemera
+index.md: # Introduction
+01.md: # Style, Scrivener's and Mine
+02.md: # Starting the Project
+03.md: # Default Formatting
+04.md: # Styles
+05.md: # Sections
+06.md: # Documents, Sections, Layouts
+07.md: # Regrets, I've had a few
+08.md: # Testing the Compile
+09.md: # Setting up the project
+10.md: # ToC and Pages
+11.md: # Splitting
+12.md: # Prev, Top, Next
+13.md: # Image References Fail
+14.md: # Image References Alternative
+15.md: # Refactoring First
+16.md: # Image References
+17.md: # Better Links
+18.md: # Creating the ToC
+19.md: # Post-Processing Built In
+20.md: # Assessing Where We Are
+21.md: # TL; DR
+22.md: # Thoughts on Improvements
+23.md: # The End
+24.md: # This just in
+25.md: # Appendices and Ephemera

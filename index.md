@@ -2,7 +2,7 @@
 
 # Introduction #
 
-Version 6/30/18 11:27 AM
+Version 7/4/18 9:39 AM
 
 Recent Changes: 
 
@@ -38,7 +38,8 @@ TL;DR - summarizes settings changes
 * [TL; DR](21.md)
 * [Thoughts on Improvements](22.md)
 * [The End](23.md)
-* [Appendices and Ephemera](24.md)
+* [This just in](24.md)
+* [Appendices and Ephemera](25.md)
 
 ### Welcome
 
