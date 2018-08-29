@@ -23,7 +23,8 @@ end
 
 def make_link_line(filenumber, max_length)
   link = ""
-  link += "[%s](%02d.html) | " % [trim_left(Titles[filenumber - 1]), filenumber - 1] unless filenumber == 0
+  link += "[%s](%02d.html) | " % [trim_left(Titles[filenumber - 1]), filenumber - 1] unless filenumber <= 1 # mod
+  link += "[%s](index.html) | " % [trim_left(Titles[filenumber - 1]) ] if filenumber == 1 # added
   link += "[Top](index.html) | "
   link += "[%s](%02d.html)" % [trim_left(Titles[filenumber + 1]), filenumber + 1] unless filenumber >= max_length
   return link
